@@ -2,18 +2,22 @@
 
 
 
+/* =======================================
+   HERO SECTION
+======================================= */
+
 /* Hero full screen */
-.hero{
+.hero {
   min-height: 100vh;
   display: grid;
-  place-items: center;  
+  place-items: center;
   position: relative;
   overflow: hidden;
-  background: url("HeroImage.jpg")center/cover;
+  background: url("HeroImage.jpg") center/cover;
 }
 
 /* Center content */
-.hero-center{
+.hero-center {
   display: grid;
   justify-items: center;
   gap: 20px;
@@ -21,16 +25,22 @@
   text-align: center;
 }
 
-/* Logo */
+/* =======================================
+   LOGO
+======================================= */
+
 .logo-img {
   width: clamp(300px, 40vw, 700px);
   height: auto;
   transform: translateY(-8vh);
-  filter: drop-shadow(0 6px 12px rgba(0,0,0,.30));
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, .30));
 }
 
-/* Burger-menu */
-.hamburger{
+/* =======================================
+   BURGER MENU BUTTON
+======================================= */
+
+.hamburger {
   position: absolute;
   top: 24px;
   right: 24px;
@@ -43,20 +53,106 @@
   padding: 12px;
   border: none;
   border-radius: 12px;
-  background: rgba(0,0,0,0.18);
+  background: rgba(0, 0, 0, 0.18);
   backdrop-filter: blur(2px);
   cursor: pointer;
   z-index: 2;
 }
-.hamburger span{
+
+.hamburger span {
   width: 100%;
   height: 6px;
   background: #fff;
   border-radius: 999px;
 }
 
-/* Scroll knap */
-.chevron{
+/* Skjul checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* Overlay */
+.hamburger-overlay {
+  display: none;
+}
+
+/* Aktiv overlay */
+#menu-toggle:checked ~ .hamburger-overlay {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(2px);
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 40;
+}
+
+/* =======================================
+   SIDE MENU
+======================================= */
+
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -320px;
+  width: 260px;
+  height: 100%;
+  background: #4a4a4a;
+  padding: 40px 20px;
+  z-index: 50;
+  transition: 0.4s ease;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Åben menu */
+#menu-toggle:checked ~ .side-menu {
+  right: 0;
+}
+
+/* Menu list */
+.side-menu ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.side-menu ul li {
+  margin: 28px 0;
+}
+
+.side-menu ul li a {
+  font-family: "Alfa Slab One";
+  font-size: 22px;
+  text-decoration: none;
+  color: white;
+}
+
+/* Social icons */
+.socials {
+  margin-top: auto;
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.socials img {
+  width: 28px;
+  height: 28px;
+  filter: invert(1);
+}
+
+/* =======================================
+   SCROLL CHEVRON
+======================================= */
+
+.chevron {
   position: absolute;
   bottom: 24px;
   left: 50%;
@@ -66,13 +162,14 @@
   border-radius: 50%;
   display: grid;
   place-items: center;
-  background: rgba(255,255,255,0.22);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+  background: rgba(255, 255, 255, 0.22);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
   text-decoration: none;
   z-index: 2;
   backdrop-filter: blur(2px);
 }
-.chevron span{
+
+.chevron span {
   width: 16px;
   height: 16px;
   border-right: 3px solid #fff;
@@ -80,8 +177,11 @@
   transform: rotate(45deg);
 }
 
-/* Content section */
-.content{
+/* =======================================
+   CONTENT SECTIONS
+======================================= */
+
+.content {
   padding: 64px 24px;
   background: #fff;
   color: #222;
@@ -89,8 +189,8 @@
   text-align: center;
 }
 
-/* Buttom */
-.cta-btn{
+/* CTA button */
+.cta-btn {
   display: inline-block;
   padding: 12px 24px;
   border-radius: 8px;
@@ -99,8 +199,10 @@
   text-decoration: none;
   font-weight: 700;
 }
-.cta-btn:hover{ 
-  background: #6c322b; 
+
+.cta-btn:hover {
+  background: #6c322b;
 }
+
 
 
