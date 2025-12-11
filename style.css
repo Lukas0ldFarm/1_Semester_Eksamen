@@ -30,10 +30,74 @@
 ======================================= */
 
 .logo-img {
-  width: clamp(300px, 40vw, 700px);
+  width: clamp(500px, 60vw, 1200px);
   height: auto;
   transform: translateY(-8vh);
   filter: drop-shadow(0 6px 12px rgba(0, 0, 0, .30));
+}
+
+/* =======================================
+   Knap på forside
+======================================= */
+.cta-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 8px;
+  background: #5d2923;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.cta-btn:hover {
+  background: #6c322b;
+}
+
+
+.hero-center {
+  position: relative; 
+}
+
+.hero-btn {
+  position: absolute;
+  top: 58%;                
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 22px;
+}
+
+.scroll-gap {
+  height: 15vh;              
+  background: #ffffff00;     
+}
+
+/* =======================================
+   Arrow pil ned
+======================================= */
+
+.arrow_ned {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.22);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  text-decoration: none;
+  z-index: 2;
+  backdrop-filter: blur(2px);
+}
+
+.arrow_ned span {
+  width: 16px;
+  height: 16px;
+  border-right: 3px solid #000;
+  border-bottom: 3px solid #000;
+  transform: rotate(45deg);
 }
 
 /* =======================================
@@ -149,36 +213,7 @@
 }
 
 /* =======================================
-   SCROLL CHEVRON
-======================================= */
-
-.chevron {
-  position: absolute;
-  bottom: 24px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  background: rgba(255, 255, 255, 0.22);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
-  text-decoration: none;
-  z-index: 2;
-  backdrop-filter: blur(2px);
-}
-
-.chevron span {
-  width: 16px;
-  height: 16px;
-  border-right: 3px solid #fff;
-  border-bottom: 3px solid #fff;
-  transform: rotate(45deg);
-}
-
-/* =======================================
-   CONTENT SECTIONS
+   Plads mellem forside og About
 ======================================= */
 
 .content {
@@ -189,20 +224,197 @@
   text-align: center;
 }
 
-/* CTA button */
-.cta-btn {
+
+/* =======================================
+   ABOUT 
+======================================= */
+.about-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+  padding: 60px 20px;
+  background: #f37e20; 
+  color: #fff;
+}
+
+.about-section img {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  flex: 1;
+}
+
+.about-text {
+  flex: 1;
+  max-width: 500px;
+}
+
+.about-text h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* =======================================
+   WORLD TOUR 
+======================================= */
+.worldtour-section {
+  padding: 60px 20px;
+  text-align: center;
+  background: #e0f0ff; 
+  position: relative;
+  overflow: hidden;
+}
+
+.worldtour-section h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.worldtour-content {
   display: inline-block;
+  max-width: 900px;
+  width: 100%;
+  position: relative;
+}
+
+.worldtour-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* Overlay tekst midt på billedet */
+.worldtour-content .overlay-text {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.6);
+  color: #fff;
   padding: 12px 24px;
+  font-size: 20px;
   border-radius: 8px;
-  background: #5d2923;
+}
+
+/* Knap */
+.worldtour-content .explore-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 28px;
+  background: #8b0000; 
   color: #fff;
   text-decoration: none;
   font-weight: 700;
+  border-radius: 8px;
+  transition: background 0.3s;
 }
 
-.cta-btn:hover {
-  background: #6c322b;
+.worldtour-content .explore-btn:hover {
+  background: #a30000;
 }
 
+/* =======================================
+   Animated film
+======================================= */
+.film-section {
+    text-align: center;
+    padding: 80px 20px;
+    background: #fff;
+}
 
+.film-section h2 {
+    font-family: "Alfa Slab One", sans-serif;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
 
+.film-text a {
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 18px;
+    text-decoration: underline;
+    color: #1a1a1a;
+}
+
+.film-text a:hover {
+    opacity: 0.7;
+}
+
+/* Video container (holder video responsiv) */
+.video-container {
+    position: relative;
+    width: 90%;
+    max-width: 900px;
+    margin: 30px auto;
+    padding-bottom: 50.25%; 
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #000;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* =======================================
+   Footer
+======================================= */
+
+.site-footer {
+    background: #3a3a3a;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    color: white;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}
+
+.footer-links a {
+    font-family: "Red Hat Display", sans-serif;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer-links a:hover {
+    opacity: 0.7;
+}
+
+/* Social icons */
+.footer-socials {
+    display: flex;
+    gap: 18px;
+}
+
+.footer-socials img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.footer-socials img:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}

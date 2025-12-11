@@ -14,7 +14,7 @@
 
 
 
- <header class="hero" aria-label="Forside">
+<header class="hero">
 
   <!-- Checkbox til at styre menuen -->
   <input type="checkbox" id="menu-toggle">
@@ -42,7 +42,7 @@
   <label for="menu-toggle" class="hamburger-overlay"></label>
 
   <!-- Burger-menu -->
-  <label for="menu-toggle" class="hamburger" aria-label="Åbn menu">
+  <label for="menu-toggle" class="hamburger">
     <span></span>
     <span></span>
     <span></span>
@@ -50,23 +50,73 @@
 
   <!-- Indhold i midten -->
   <div class="hero-center">
-    <img src="Subway Surfer logo.png" alt="Subway Surfer Logo" class="logo-img">
+    <img src="Subway Surfer logo.png" alt="" class="logo-img">
+	 <a href="#content" class="cta-btn hero-btn">Explore</a>
   </div>
 
-  <!-- Chevron -->
-  <a href="#content" class="chevron" aria-label="Scroll ned">
+  <!-- Arrow ned -->
+  <a href="#content" class="arrow_ned">
     <span></span>
   </a>
 
 </header>
 
-<!-- INDHOLD UNDER HERO -->
-<section id="content" class="content">
-  <h1>Velkommen til min side</h1>
-  <p>Her kan du tilføje mere indhold…</p>
+<!-- Tomt mellemrum efter hero (så man scroller ned til næste sektion) -->
+<section class="scroll-gap"></section>
+	
+<!-- About sektion -->
+<section class="about-section">
+  <img src="About_billede.png" width="751" height="512" alt=""/>
+<div class="about-text">
+    <h2>About</h2>
+    <p>Subway Surfers is a fast-paced endless runner released in 2012 by SYBO. You play as Jake and his friends while escaping the Inspector, collecting coins and unlocking new characters. Its colorful style and constantly updated World Tour make it a global favorite.</p>
+  </div>
 </section>
 
+<!-- World Tour sektion -->
+<section class="worldtour-section">
+  <h2>World Tour</h2>
+  <div class="worldtour-content">
+    <img src="World Tour_billede.png" width="871" height="512" alt=""/>
+<div class="overlay-text">Go and explore the newest world tour update</div>
+    <a href="#" class="explore-btn">Go Explore</a>
+  </div>
+</section>
 
+<!-- Animated Film sektion -->
+<section class="film-section" id="animated-film">
+    <h2>Animated film</h2>
 
+    <p class="film-text">
+        <a href="#">Subway Surfers began as an award-winning animated short film in 2009.</a>
+    </p>
+
+    <div class="video-container">
+        <iframe 
+            src="https://www.youtube.com/watch?v=5JdyVxoQTrE&t=4s"
+            title="YouTube video"
+            allowfullscreen>
+        </iframe>
+    </div>
+</section>
+	
+	<!-- Footer -->
+<footer class="site-footer">
+    <div class="footer-links">
+        <a href="#">Support</a>
+        <a href="#">About SYBO Games</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Cookies</a>
+    </div>
+
+    <div class="footer-socials">
+        <img src="Facebook.png" alt="Facebook">
+        <img src="YouTube.png" alt="YouTube">
+        <img src="Tiktok.png" alt="TikTok">
+        <img src="Instagram.png" alt="Instagram">
+        <img src="Discord.png" alt="Discord">
+    </div>
+</footer>
+<!------!>
 </body>
 </html>
