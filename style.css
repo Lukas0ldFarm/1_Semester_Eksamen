@@ -230,35 +230,36 @@
 ======================================= */
 .about-section {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  gap: 40px;
-  padding: 60px 20px;
-  background: #f37e20; 
+  justify-content: center;
+  padding: 0;                  
+  background: #da7123;         
   color: #fff;
+  height: 520px;               
 }
 
 .about-section img {
-  max-width: 500px;
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  flex: 1;
+  width: 55%;                  
+  height: 100%;
+  object-fit: cover;           
 }
 
 .about-text {
-  flex: 1;
-  max-width: 500px;
+  width: 45%;
+  padding: 40px 60px;          
 }
 
 .about-text h2 {
-  font-size: 36px;
+  font-size: 58px;
   margin-bottom: 20px;
+  font-family: "Alfa Slab One";
 }
 
 .about-text p {
-  font-size: 18px;
-  line-height: 1.6;
+  font-size: 20px;
+  line-height: 1.5;
+  font-family: "Red Hat Display";
+  max-width: 420px;
 }
 
 /* =======================================
@@ -267,49 +268,55 @@
 .worldtour-section {
   padding: 60px 20px;
   text-align: center;
-  background: #e0f0ff; 
-  position: relative;
-  overflow: hidden;
+  background: #e0f0ff;
 }
 
+/* Overskrift */
 .worldtour-section h2 {
   font-size: 32px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
+/* Billedcontainer */
 .worldtour-content {
-  display: inline-block;
-  max-width: 900px;
-  width: 100%;
   position: relative;
+  width: 100%;          
+  max-width: 1250px;    
+  margin: 0 auto;      
 }
 
+/* Selve billedet */
 .worldtour-content img {
   width: 100%;
   height: auto;
-  border-radius: 12px;
+  border-radius: 16px;
 }
 
-/* Overlay tekst midt på billedet */
+/* Subtil baggrund bag tekst */
 .worldtour-content .overlay-text {
   position: absolute;
-  bottom: 60px;
+  bottom: 70px;
   left: 50%;
   transform: translateX(-50%);
-  background: rgba(0,0,0,0.6);
-  color: #fff;
-  padding: 12px 24px;
+  
+  background: rgba(0, 0, 0, 0.35); 
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: white;
   font-size: 20px;
-  border-radius: 8px;
+  backdrop-filter: blur(3px);       
 }
 
-/* Knap */
+/* Knap ovenpå billedet */
 .worldtour-content .explore-btn {
-  display: inline-block;
-  margin-top: 20px;
+  position: absolute;
+  bottom: 20px;        
+  left: 50%;
+  transform: translateX(-50%);
+  
   padding: 12px 28px;
-  background: #8b0000; 
-  color: #fff;
+  background: #8b0000;
+  color: white;
   text-decoration: none;
   font-weight: 700;
   border-radius: 8px;
@@ -350,7 +357,7 @@
 .video-container {
     position: relative;
     width: 90%;
-    max-width: 900px;
+    max-width: 1100px;
     margin: 30px auto;
     padding-bottom: 50.25%; 
     height: 0;
@@ -372,27 +379,26 @@
    Footer
 ======================================= */
 
+
 .site-footer {
     background: #3a3a3a;
-    padding: 40px 20px;
+    padding: 60px 60px; 
     display: flex;
-    flex-direction: column;
+    justify-content: space-between; 
     align-items: center;
-    gap: 25px;
     color: white;
+    flex-wrap: wrap; 
 }
 
 .footer-links {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
-    text-align: center;
+    gap: 30px; 
 }
 
 .footer-links a {
     font-family: "Red Hat Display", sans-serif;
     color: white;
-    font-size: 18px;
+    font-size: 16px; 
     text-decoration: none;
     font-weight: 600;
 }
@@ -401,15 +407,14 @@
     opacity: 0.7;
 }
 
-/* Social icons */
 .footer-socials {
     display: flex;
-    gap: 18px;
+    gap: 20px; 
 }
 
 .footer-socials img {
-    width: 40px;
-    height: 40px;
+    width: 35px; 
+    height: 35px;
     cursor: pointer;
     transition: 0.2s;
 }
@@ -417,4 +422,125 @@
 .footer-socials img:hover {
     transform: scale(1.1);
     opacity: 0.8;
+}
+
+.footer-links {
+    flex-direction: column; 
+    gap: 10px;
+}
+
+
+/* =======================================
+   Underside: SUPPORT
+======================================= */
+
+.support-header {
+    height: 220px;     
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    position: relative; 
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.support-logo {
+    position: absolute; 
+	left: 30px;
+    height: 320px; 
+    width: auto;
+}
+
+
+/* Burger i højre side */
+.support-header .hamburger {
+    position: absolute;
+    right: 20px;
+    top: 30px;         
+}
+
+.support-title {
+    font-family: "Alfa Slab One";
+    font-size: 3rem;
+    width: 100%;
+    text-align: center;
+}
+
+/* --- SUPPORT SIDE LAYOUT --- */
+
+.support-section {
+    width: 90%;
+    max-width: 1100px;
+    margin: 50px auto;
+    font-family: "Red Hat Display";
+}
+
+.support-section h2 {
+    margin-bottom: 30px;
+}
+
+.support-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.support-box {
+    border: 2px solid #ccc;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+}
+
+.support-box h3 {
+    margin-bottom: 10px;
+}
+
+.official-links {
+    margin-top: 40px;
+}
+
+.official-links ul {
+    padding: 0;
+    list-style: none;
+}
+
+
+/* =======================================
+   Underside: About The Game
+======================================= */
+
+.AboutTheGame-header {
+    height: 220px;     
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    position: relative; 
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.AboutTheGame-logo {
+    position: absolute; 
+	left: 30px;
+    height: 320px; 
+    width: auto;
+		
+}
+
+.AboutTheGame-title {
+    font-family: "Alfa Slab One";
+    font-size: 3rem;
+    width: 100%;
+    text-align: left;
+}
+
+.What-is-Subway_Surfer h2 {
+	font-family: "Alfa Slab One";
+	text-align: center;
+}
+
+.What-is-Subway_Surfer p {
+	font-family: "Red Hat Display";
+	text-align: center;
 }
