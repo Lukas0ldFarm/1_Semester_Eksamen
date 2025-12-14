@@ -543,4 +543,37 @@
 .What-is-Subway_Surfer p {
 	font-family: "Red Hat Display";
 	text-align: center;
+	margin-bottom: 30px;
+}
+
+.What-is-Subway_Surfer img {
+	 display: block;
+     margin: 0 auto;
+}
+
+.Howtoplay h2 {
+	font-family: "Alfa Slab One";
+	text-align: center;
+}
+
+.Howtoplay p {
+	font-family: "Red Hat Display";
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.special_features h2 {
+	font-family: "Alfa Slab One";
+	text-align: center;
+}
+
+.special_features p {
+	font-family: "Red Hat Display";
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.special_features img {
+	 display: block;
+     margin: 0 auto;
 }
