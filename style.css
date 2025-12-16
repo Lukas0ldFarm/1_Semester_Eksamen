@@ -16,6 +16,15 @@
   background: url("HeroImage.jpg") center/cover;
 }
 
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.7));
+}
+
+
 /* Center content */
 .hero-center {
   display: grid;
@@ -251,6 +260,7 @@
 
 .about-text h2 {
   font-size: 58px;
+  color: #eee;
   margin-bottom: 20px;
   font-family: "Alfa Slab One";
 }
@@ -259,6 +269,7 @@
   font-size: 20px;
   line-height: 1.5;
   font-family: "Red Hat Display";
+  color: #333;
   max-width: 420px;
 }
 
@@ -274,6 +285,7 @@
 /* Overskrift */
 .worldtour-section h2 {
   font-size: 32px;
+  color: #555;
   margin-bottom: 30px;
 }
 
@@ -339,6 +351,7 @@
 .film-section h2 {
     font-family: "Alfa Slab One", sans-serif;
     font-size: 36px;
+	color: #555;
     margin-bottom: 10px;
 }
 
@@ -452,6 +465,15 @@
 }
 
 
+.logo-link {
+    display: block;       /* Sørger for at linket ikke tilføjer ekstra spacing */
+    position: absolute;   /* Matcher billedets position */
+    top: 0;               /* Juster hvis nødvendigt */
+    left: 30px;           /* Samme som billedet */
+    line-height: 0;       /* Fjerner ekstra linjehøjde */
+}
+
+
 /* Burger i højre side */
 .support-header .hamburger {
     position: absolute;
@@ -477,6 +499,7 @@
 
 .support-section h2 {
     margin-bottom: 30px;
+	color: #555;
 }
 
 .support-grid {
@@ -494,6 +517,7 @@
 
 .support-box h3 {
     margin-bottom: 10px;
+	color: #555;
 }
 
 .official-links {
@@ -532,51 +556,80 @@
     font-family: "Alfa Slab One";
     font-size: 3rem;
     width: 100%;
-    text-align: left;
+    text-align: center;
+	color: #555;
+}
+
+.What-is-Subway_Surfer {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #f9f9f9; 
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .What-is-Subway_Surfer h2 {
-	font-family: "Alfa Slab One";
-	text-align: center;
+  font-family: "Alfa Slab One", serif;
+  text-align: center;
+  color: #333;
+  font-size: 2.2rem;
+  margin-bottom: 15px;
 }
 
 .What-is-Subway_Surfer p {
-	font-family: "Red Hat Display";
-	text-align: center;
-	margin-bottom: 30px;
+  font-family: "Red Hat Display", sans-serif;
+  text-align: center;
+  color: #555;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
 
 .What-is-Subway_Surfer img {
-	 display: block;
-     margin: 0 auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.Howtoplay h2 {
-	font-family: "Alfa Slab One";
-	text-align: center;
+.Howtoplay, .special_features {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #f9f9f9; 
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.Howtoplay p {
-	font-family: "Red Hat Display";
-	text-align: center;
-	margin-bottom: 30px;
+.Howtoplay h2, .special_features h2 {
+  font-family: "Alfa Slab One", serif;
+  text-align: center;
+  color: #333;
+  font-size: 2.2rem;
+  margin-bottom: 15px;
 }
 
-.special_features h2 {
-	font-family: "Alfa Slab One";
-	text-align: center;
-}
-
-.special_features p {
-	font-family: "Red Hat Display";
-	text-align: center;
-	margin-bottom: 30px;
+.Howtoplay p, .special_features p {
+  font-family: "Red Hat Display", sans-serif;
+  text-align: center;
+  color: #555;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
 
 .special_features img {
-	 display: block;
-     margin: 0 auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
+
 
 /* =======================================
    Underside: World Tour
@@ -585,11 +638,13 @@
 .What_is_world_tours h1, h2 {
 	font-family: "Alfa Slab One";
 	text-align: center;
+	color: #333;
 }
 
 .What_is_world_tours p {
 	font-family: "Red Hat Display";
 	text-align: center;
+	color: #555;
 	margin-bottom: 30px;
 }
 
@@ -614,9 +669,62 @@
     margin: 0 auto;
 }
 
+.Currently_at img {
+    margin-bottom: 40px;
+}
+
 /* =======================================
    Underside: About SYBO
 ======================================= */
+
+.sybo-about {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+  font-family: "Red Hat Display";
+  background: #f9f9f9; 
+  border-radius: 8px;
+}
+
+.about-SYBO-text {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.about-SYBO-text h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.about-SYBO-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.SYBO_Kiloo_logo {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap; 
+}
+
+.SYBO_Kiloo_logo img {
+  width: 250px; 
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.SYBO_Kiloo_logo img:hover {
+  transform: scale(1.05); 
+}
+
+
 .sybo-values {
   max-width: 900px;
   margin: 80px auto;
@@ -664,9 +772,12 @@
 .value h3 {
   font-size: 20px;
   margin-bottom: 12px;
+  color: #333;
 }
 
 .value p {
   font-size: 16px;
   line-height: 1.6;
+  color: #555;
 }
+
