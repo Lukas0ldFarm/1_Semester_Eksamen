@@ -451,28 +451,19 @@
     height: 220px;     
     background: white;
     display: flex;
-    align-items: center;
-    justify-content: center; 
-    position: relative; 
+    align-items: center; 
+    padding-left: 30px;  
     border-bottom: 2px solid #e0e0e0;
 }
 
 .support-logo {
     position: absolute; 
+	top:0px;
 	left: 30px;
-    height: 320px; 
+    height: 220px; 
     width: auto;
+	display:block;
 }
-
-
-.logo-link {
-    display: block;       /* Sørger for at linket ikke tilføjer ekstra spacing */
-    position: absolute;   /* Matcher billedets position */
-    top: 0;               /* Juster hvis nødvendigt */
-    left: 30px;           /* Samme som billedet */
-    line-height: 0;       /* Fjerner ekstra linjehøjde */
-}
-
 
 /* Burger i højre side */
 .support-header .hamburger {
@@ -538,18 +529,18 @@
     height: 220px;     
     background: white;
     display: flex;
-    align-items: center;
-    justify-content: center; 
-    position: relative; 
+    align-items: center; 
+    padding-left: 30px;  
     border-bottom: 2px solid #e0e0e0;
 }
 
 .AboutTheGame-logo {
     position: absolute; 
+	top:0px;
 	left: 30px;
-    height: 320px; 
+    height: 220px; 
     width: auto;
-		
+	display:block;
 }
 
 .AboutTheGame-title {
@@ -634,6 +625,23 @@
 /* =======================================
    Underside: World Tour
 ======================================= */
+.World_Tour-header {
+    height: 220px;     
+    background: white;
+    display: flex;
+    align-items: center; 
+    padding-left: 30px;  
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.World_Tour-logo {
+    position: absolute; 
+	top:0px;
+	left: 30px;
+    height: 220px; 
+    width: auto;
+	display:block;
+}
 
 .What_is_world_tours h1, h2 {
 	font-family: "Alfa Slab One";
@@ -676,6 +684,23 @@
 /* =======================================
    Underside: About SYBO
 ======================================= */
+.About_SYBO-header {
+    height: 220px;     
+    background: white;
+    display: flex;
+    align-items: center; 
+    padding-left: 30px;  
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.About_SYBO-logo {
+    position: absolute; 
+	top:0px;
+	left: 30px;
+    height: 220px; 
+    width: auto;
+	display:block;
+}
 
 .sybo-about {
   max-width: 1200px;
