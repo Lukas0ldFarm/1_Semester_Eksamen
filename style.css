@@ -810,7 +810,7 @@
     Responsiv tilpassning
 ======================================= */
 /* --- Desktop styling (behold som nu) --- */
-.hero { ... }
+.hero 
 .about-section { display: flex; flex-direction: row; height: 520px; }
 .gallery-4x4 { grid-template-columns: repeat(4, 1fr); }
 /* osv. */
@@ -822,30 +822,44 @@
     gap: 20px;
   }
   .logo-img {
-    width: clamp(250px, 70vw, 400px);
+    width: clamp(350px, 80vw, 600px);
+    max-width: none;
   }
 }
 
+
 /* --- Mobil (max-width: 768px) --- */
+
 @media (max-width: 768px) {
+    
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+  }
+
+  .about-section img,
+  .about-text {
+    width: 100%;
+  }
+}
 
   .about-section {
     display: flex;
-    flex-direction: row;      
+    flex-direction: column; 
     width: 100%;
-    min-height: auto;        
+    min-height: auto;
   }
 
-  .about-section img {
-    width: 50%;              
+  .about-section{
+    width: 100%; 
     height: auto;
     object-fit: cover;
     display: block;
   }
 
   .about-text {
-    width: 50%;               
-    padding: 20px;
+    width: 100%; 
+    padding: 16px; 
     box-sizing: border-box;
   }
 
@@ -856,6 +870,14 @@
   .about-text p {
     line-height: 1.5;
   }
+
+  .support-logo,
+  .AboutTheGame-logo,
+  .World_Tour-logo,
+  .About_SYBO-logo {
+    height: 160px;
+    width: auto;
+  }
 }
 
 /* --- Ekstra små skærme (max-width: 480px) --- */
@@ -864,6 +886,7 @@
   h2 { font-size: 22px; }
   p { font-size: 16px; }
 }
+
 
 @media (max-width: 768px) {
   .support-logo,
