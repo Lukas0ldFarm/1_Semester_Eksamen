@@ -828,10 +828,7 @@
 }
 
 
-/* --- Mobil (max-width: 768px) --- */
-
-@media (max-width: 768px) {
-    
+/* --- Mobil (max-width: 768px) --- */    
 @media (max-width: 768px) {
   .about-section {
     flex-direction: column;
