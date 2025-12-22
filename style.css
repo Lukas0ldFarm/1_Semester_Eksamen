@@ -16,14 +16,12 @@
   background: url("HeroImage.jpg") center/cover;
 }
 
-
 .hero::before {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
   background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.7));
 }
-
 
 /* Center content */
 .hero-center {
@@ -62,7 +60,6 @@
   background: #6c322b;
 }
 
-
 .hero-center {
   position: relative; 
 }
@@ -77,13 +74,12 @@
 
 .scroll-gap {
   height: 15vh;              
-  background: #ffffff00;     
+  background: #ffffff;     
 }
 
 /* =======================================
    Arrow pil ned
 ======================================= */
-
 .arrow_ned {
   position: absolute;
   bottom: 24px;
@@ -112,7 +108,6 @@
 /* =======================================
    BURGER MENU BUTTON
 ======================================= */
-
 .hamburger {
   position: absolute;
   top: 24px;
@@ -165,7 +160,6 @@
 /* =======================================
    SIDE MENU
 ======================================= */
-
 .side-menu {
   position: fixed;
   top: 0;
@@ -176,7 +170,6 @@
   padding: 40px 20px;
   z-index: 50;
   transition: 0.4s ease;
-
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -222,29 +215,19 @@
 }
 
 /* =======================================
-   Plads mellem forside og About
-======================================= */
-
-.content {
-  padding: 64px 24px;
-  background: #fff;
-  color: #222;
-  min-height: 50vh;
-  text-align: center;
-}
-
-
-/* =======================================
    ABOUT 
 ======================================= */
+
+
+
 .about-section {
   display: flex;
+  justify-content: flex-start; 
   align-items: center;
-  justify-content: center;
   padding: 0;                  
   background: #da7123;         
   color: #fff;
-  height: 520px;               
+  height: 520px;  
 }
 
 .about-section img {
@@ -254,9 +237,16 @@
 }
 
 .about-text {
-  width: 45%;
-  padding: 40px 60px;          
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  flex: 1; 
+  max-width: none; 
+  text-align: center;
 }
+
+
 
 .about-text h2 {
   font-size: 58px;
@@ -271,7 +261,9 @@
   font-family: "Red Hat Display";
   color: #333;
   max-width: 420px;
+  text-align: center;
 }
+
 
 /* =======================================
    WORLD TOUR 
@@ -282,14 +274,12 @@
   background: #e0f0ff;
 }
 
-/* Overskrift */
 .worldtour-section h2 {
   font-size: 32px;
   color: #555;
   margin-bottom: 30px;
 }
 
-/* Billedcontainer */
 .worldtour-content {
   position: relative;
   width: 100%;          
@@ -297,7 +287,6 @@
   margin: 0 auto;      
 }
 
-/* Selve billedet */
 .worldtour-content img {
   width: 100%;
   height: auto;
@@ -391,8 +380,6 @@
 /* =======================================
    Footer
 ======================================= */
-
-
 .site-footer {
     background: #3a3a3a;
     padding: 60px 60px; 
@@ -446,7 +433,6 @@
 /* =======================================
    Underside: SUPPORT
 ======================================= */
-
 .support-header {
     height: 220px;     
     background: white;
@@ -465,7 +451,6 @@
 	display:block;
 }
 
-/* Burger i højre side */
 .support-header .hamburger {
     position: absolute;
     right: 20px;
@@ -478,8 +463,6 @@
     width: 100%;
     text-align: center;
 }
-
-/* --- SUPPORT SIDE LAYOUT --- */
 
 .support-section {
     width: 90%;
@@ -524,7 +507,6 @@
 /* =======================================
    Underside: About The Game
 ======================================= */
-
 .AboutTheGame-header {
     height: 220px;     
     background: white;
@@ -620,7 +602,6 @@
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
-
 
 /* =======================================
    Underside: World Tour
@@ -749,7 +730,6 @@
   transform: scale(1.05); 
 }
 
-
 .sybo-values {
   max-width: 900px;
   margin: 80px auto;
@@ -766,7 +746,7 @@
   position: relative;
   padding: 20px 0;
 }
-
+/* Laver en streg midt imellem values */
 .values-timeline::before {
   content: "";
   position: absolute;
@@ -809,11 +789,9 @@
 /* =======================================
     Responsiv tilpassning
 ======================================= */
-/* --- Desktop styling (behold som nu) --- */
 .hero 
 .about-section { display: flex; flex-direction: row; height: 520px; }
 .gallery-4x4 { grid-template-columns: repeat(4, 1fr); }
-/* osv. */
 
 /* --- Tablet (max-width: 1024px) --- */
 @media (max-width: 1024px) {
@@ -827,53 +805,111 @@
   }
 }
 
-
 /* --- Mobil (max-width: 768px) --- */    
 @media (max-width: 768px) {
+  
+.about-section {
+   display: flex;
+   flex-direction: column; 
+   width: 100%;
+   height: auto; 
+   padding: 16px; 
+   box-sizing: border-box;
+  }
+
+.about-section img,
+.about-text {
+    width: 100%; 
+  }
+}
+
+
+.about-text {
+  width: 100%; 
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.about-text h2 {
+  margin-bottom: 12px;
+}
+
+.about-text p {
+  line-height: 1.5;
+}
+
+/* --- Mobil (max-width: 768px) --- */
+@media (max-width: 768px) {
   .about-section {
-    flex-direction: column;
+    flex-direction: column; 
   }
 
   .about-section img,
   .about-text {
-    width: 100%;
+    width: 100%; 
   }
 }
 
-  .about-section {
-    display: flex;
-    flex-direction: column; 
-    width: 100%;
-    min-height: auto;
+@media (max-width: 768px) {
+  .gallery-4x4 {
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 10px;
   }
 
-  .about-section{
+  .gallery-4x4 img {
+    height: auto; 
+  }
+}
+
+
+@media (max-width: 768px) {
+  .World_Tour-header {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+  }
+}
+
+  .Currently_at img {
     width: 100%; 
-    height: auto;
-    object-fit: cover;
-    display: block;
+    height: auto; 
+    margin-bottom: 20px; 
+  }
+}
+
+@media (max-width: 768px) {
+  .What_is_world_tours h1, h2 {
+    font-size: 1.5rem;
   }
 
-  .about-text {
-    width: 100%; 
-    padding: 16px; 
-    box-sizing: border-box;
+  .What_is_world_tours p {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    display: flex;        
+    align-items: center;  
+    justify-content: flex-start; 
   }
 
-  .about-text h2 {
-    margin-bottom: 12px;
+  header a img {
+    width: 80px;  
+    height: auto; 
+    margin: 0;   
   }
 
-  .about-text p {
-    line-height: 1.5;
-  }
-
+  /* Hvis du har andre logoer i headeren */
   .support-logo,
   .AboutTheGame-logo,
   .World_Tour-logo,
   .About_SYBO-logo {
-    height: 160px;
-    width: auto;
+    width: 140px; 
+    height: auto;
+    margin: 0;
+	padding-top: 20px;
   }
 }
 
@@ -882,17 +918,6 @@
   h1 { font-size: 28px; }
   h2 { font-size: 22px; }
   p { font-size: 16px; }
-}
-
-
-@media (max-width: 768px) {
-  .support-logo,
-  .AboutTheGame-logo,
-  .World_Tour-logo,
-  .About_SYBO-logo {
-    height: 160px;
-	width:auto;
-  }
 }
 
 
